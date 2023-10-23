@@ -30,7 +30,8 @@ exports.config = {
           '--no-sandbox',
           '--disable-dev-shm-usage'
         ]
-      }
+      },
+      browserVersion: '118'
     }
   ],
   // ===================
@@ -102,10 +103,11 @@ exports.config = {
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
   before: function (capabilities, specs) {
-    const chai = require('chai')
-    global.expect = chai.expect
+    // const chai = require('chai')
+    // global.expect = chai.expect
     browser.setWindowSize(1920, 1080)
   }
+  // ,
   /**
    * Gets executed after all workers got shut down and the process is about to exit. An error
    * thrown in the onComplete hook will result in the test run failing.
@@ -113,7 +115,7 @@ exports.config = {
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
-   */
-  /* onComplete: function (exitCode, config, capabilities, results) {
-  } */
+   */  
+  // onComplete: function (exitCode, config, capabilities, results) {
+  // }
 }
